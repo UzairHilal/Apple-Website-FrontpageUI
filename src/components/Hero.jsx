@@ -58,7 +58,7 @@ const Hero = () => {
       >
         <a
           href="highlights"
-          className="px-5 py-2 my-5 rounded-3xl bg-blue hover:bg-transparent hover:border hover:text-blue hover:border-blue"
+          className="px-5 border border-black py-2 my-5 rounded-3xl bg-blue hover:bg-transparent hover:border hover:text-blue hover:border-blue"
         >
           Buy
         </a>

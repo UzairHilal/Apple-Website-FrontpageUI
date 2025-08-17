@@ -76,20 +76,20 @@ const VideoCarousel = () => {
             gsap.to(firstSpanRef.current[videoId], {
               width: "12px",
             });
-            gsap.to(secondSpanRef.current[videoId], {
-              backgroundColor: "#afafaf",
-            });
           }
         },
       });
 
       if (videoId === 0) {
         anim.restart();
+        gsap.to("#secondSpan", {
+          backgroundColor: "#afafaf",
+        });
       }
 
       const animUpdate = () => {
         anim.progress(
-          firstSpanRef.current[videoId].currentTime /
+          videoRef.current[videoId].currentTime /
             hightlightsSlides[videoId].videoDuration
         );
       };
@@ -100,7 +100,7 @@ const VideoCarousel = () => {
         gsap.ticker.remove(animUpdate);
       }
     }
-  }, [videoId, startPlay, isPlaying]);
+  }, [videoId, startPlay]);
 
   useEffect(() => {
     if (loadedData.length >= 3) {
@@ -160,14 +160,17 @@ const VideoCarousel = () => {
       <div className="flex items-center ">
         {hightlightsSlides.map((list, i) => (
           <div key={list.id} id="slider" className="sm:pr-20 pr-10">
-            {/* <div key={list.id} className="sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh] "> */}
-            <div className="sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh] rounded-3xl bg-black flex justify-center">
+            <div className="sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh] rounded-3xl bg-black flex justify-center relative overflow-hidden">
               <video
                 id="video"
                 muted
                 playsInline={true}
                 preload="auto"
                 ref={(el) => (videoRef.current[i] = el)}
+                className={`
+                  pointer-events-none
+                  ${list.id === 1 && 'w-[70vw] md:h-[79vh] md:pb-12'}
+                  `}
                 onPlay={() => {
                   setVideo((prevVid) => ({
                     ...prevVid,
@@ -186,7 +189,7 @@ const VideoCarousel = () => {
                 <source src={list.video} type="video/mp4" />
               </video>
             </div>
-            {/* </div> */}
+  
 
             <div className="absolute top-12 left-[5%]">
               {list.textLists.map((text) => (
@@ -208,6 +211,7 @@ const VideoCarousel = () => {
               className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
             >
               <span
+                id="secondSpan"
                 className="absolute h-full w-full rounded-full"
                 ref={(e) => (secondSpanRef.current[i] = e)}
               />

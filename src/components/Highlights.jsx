@@ -23,14 +23,14 @@ const Highlights = () => {
           <div className="flex gap-5 items-end">
             <p
               id="link"
-              className="text-blue text-xl font-normal hover:underline flex items-center opacity-0 translate-y-20"
+              className="text-blue text-xl font-normal hover:underline flex items-center opacity-0 translate-y-20 cursor-pointer"
             >
               Watch the film
               <img src={watchImg} alt="watch" className="ml-3" />
             </p>
             <p
               id="link"
-              className="text-blue text-xl font-normal hover:underline flex items-center opacity-0 translate-y-20"
+              className="text-blue text-xl font-normal hover:underline flex items-center opacity-0 translate-y-20 cursor-pointer"
             >
               Watch the event
               <img src={rightImg} alt="event" className="ml-3" />
