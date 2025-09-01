@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <section className="w-full h-[95vh] bg-black relative">
-      <div className="h-5/6 w-full flex-center flex-col">
+      <div className="h-5/6 w-full flex items-center justify-center flex-col">
         <p id="hero-title"
           className="text-gray-100
             font-semibold text-3xl text-center opacity-1 max-md:mb-10 opacity-0"

@@ -10,7 +10,7 @@ const Highlights = () => {
   }, []);
 
   return (
-    <section className="bg-zinc w-screen h-full common-padding">
+    <section className="bg-zinc w-screen h-full sm:p-32 py-20  sm:px-10 px-5">
       <div className="ml-auto mr-auto  max-w-[1120px]">
         <div className="mb-12 md:flex justify-between">
           <h1
