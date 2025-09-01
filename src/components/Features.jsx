@@ -56,7 +56,7 @@ const Features = () => {
           <div className="flex flex-col items-center justify-center sm:px-10">
             <div className="relative h-[50%] w-full flex items-center">
               <video
-                className="w-full h-full object-cover object-center"
+                className="h-full object-cover object-center"
                 ref={videoRef}
                 playsInline
                 id="exploreVideo"
@@ -69,18 +69,18 @@ const Features = () => {
             </div>
             <div className="flex flex-col w-full relative">
               <div className="w-full flex flex-col md:flex-row gap-5 items-center">
-                <div className="overflow-hidden h-[50vh] flex-1 ">
+                <div className=" overflow-hidden h-[50vh] flex-1 ">
                   <img
                     src={explore1Img}
                     alt="titanium"
-                    className="w-full h-full object-cover object-center scale-150 opacity-0 g_grow"
+                    className=" w-full h-full object-cover object-center scale-150 opacity-0 g_grow"
                   />
                 </div>
                 <div className="overflow-hidden h-[50vh] flex-1">
                   <img
                     src={explore2Img}
                     alt="titanium"
-                    className="w-full h-full object-cover object-center scale-150 opacity-0 g_grow"
+                    className=" w-full h-full object-cover object-center scale-150 opacity-0 g_grow"
                   />
                 </div>
               </div>

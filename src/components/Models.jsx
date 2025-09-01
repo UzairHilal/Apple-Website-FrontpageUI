@@ -51,8 +51,8 @@ const Models = () => {
           Take a closer look.
         </h1>
 
-        <div className="mt-5">
-          <div className="w-full h-[75vh] overflow-hidden relative">
+        <div className="flex flex-col items-center mt-5">
+          <div className="w-full h-[75vh] overflow-hidden md:h-[90vh] relative">
             <ModelView
               index={1}
               item={model}
@@ -68,13 +68,14 @@ const Models = () => {
               size={size}
             />
             <Canvas
-              className=""
+              className="w-full h-full"
               style={{
                 position: "fixed",
                 top: 0,
                 bottom: 0,
                 left: 0,
                 right: 0,
+                overflow:"hidden",
               }}
               eventSource={document.getElementById("root")}
             >
@@ -85,7 +86,7 @@ const Models = () => {
           <div className="mx-auto w-full">
             <p className="text-sm font-light mb-5 text-center">{model.title}</p>
             <div className="flex items-center justify-center">
-              <ul className="flex items-center justify-center p-4 bg-gray-300 rounded-full">
+              <ul className="flex items-center justify-center p-4 bg-gray-300 rounded-full backdrop:blur">
                 {models.map((item, i) => (
                   <li
                     key={i}
