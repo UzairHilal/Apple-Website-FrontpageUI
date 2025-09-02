@@ -16,5 +16,5 @@ The project focuses on smooth animations, responsive design, and an interactive 
 - [Three.js](https://threejs.org/)  
 - [GSAP](https://greensock.com/gsap/)  
 
-##LiveDemo
+## LiveDemo
 https://iuifrontend.netlify.app/
