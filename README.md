@@ -15,3 +15,6 @@ The project focuses on smooth animations, responsive design, and an interactive 
 - [Tailwind CSS](https://tailwindcss.com/)  
 - [Three.js](https://threejs.org/)  
 - [GSAP](https://greensock.com/gsap/)  
+
+##LiveDemo
+https://iuifrontend.netlify.app/
