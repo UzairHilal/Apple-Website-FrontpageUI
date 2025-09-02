@@ -8,11 +8,12 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <main className="bg-black">
+    <main className="bg-black overflow-hidden">
       <Navbar />
       <Hero />
       <Highlights />
-      <Models />
+      {(window.screen.width) >= "1024" && <Models />}
+       {/* <Models /> */}
       <Features />
       <HowItWorks />
       <Footer />
